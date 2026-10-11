@@ -1,0 +1,8 @@
+.venv/
+.git/
+tests/
+docs/
+infra/
+out/
+*.db
+local.settings.json

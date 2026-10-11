@@ -1,0 +1,21 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+
+    "JARVIS_ENV": "local",
+    "JARVIS_DATABASE_URL": "sqlite:///jarvis.db",
+    "JARVIS_TENANTS_FILE": "config/tenants.example.yaml",
+    "JARVIS_DATA_SOURCE": "sample",
+    "JARVIS_DRY_RUN": "true",
+    "JARVIS_OUTPUT_DIR": "out",
+    "JARVIS_TIMEZONE": "America/New_York",
+    "JARVIS_REPORT_HOUR_LOCAL": "6",
+
+    "JARVIS_KEY_VAULT_URL": "",
+    "JARVIS_AI_PROVIDER": "anthropic",
+    "JARVIS_AI_MODEL": "claude-opus-5-5",
+    "ANTHROPIC_API_KEY": ""
+  }
+}

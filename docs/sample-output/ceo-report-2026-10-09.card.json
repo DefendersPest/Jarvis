@@ -1,0 +1,216 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "contentUrl": null,
+      "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.4",
+        "msteams": {
+          "width": "Full"
+        },
+        "body": [
+          {
+            "type": "Container",
+            "style": "attention",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "SAMPLE DATA - NOT REAL. Prototype output; no FieldRoutes data was used.",
+                "wrap": true,
+                "weight": "Bolder"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "JARVIS Daily CEO Report",
+            "wrap": true,
+            "size": "Large",
+            "weight": "Bolder"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Thu Oct 8, 2026 | MTD through 2026-10-08",
+            "wrap": true,
+            "isSubtle": true,
+            "spacing": "None"
+          },
+          {
+            "type": "TextBlock",
+            "text": "7 scheduled appointments not completed and not rescheduled",
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Billed revenue was $8,632 for the period and $54,546 month-to-date. The Defenders is at 106.5% of revenue goal pace; BugPro is at 80.2% of revenue goal pace. Technicians completed 113 appointments; 12 were missed. Sales added 16 subscriptions against 4 cancellations.",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Top 3 actions",
+            "wrap": true,
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "**1. The Defenders: Recover missed stops and fix the routing cause** - Operations Manager\n\n7 scheduled appointments not completed and not rescheduled",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "**2. BugPro: Close the revenue gap to goal** - General Manager\n\nBilled revenue MTD at 80% of goal pace",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "**3. BugPro: Recover missed stops and fix the routing cause** - Operations Manager\n\n5 scheduled appointments not completed and not rescheduled",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Portfolio",
+            "wrap": true,
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Billed revenue",
+                "value": "$8,632 | MTD $54,546"
+              },
+              {
+                "title": "Collections",
+                "value": "$7,334 (partial) | MTD $44,396 (partial)"
+              },
+              {
+                "title": "New customers",
+                "value": "16 | MTD 86"
+              },
+              {
+                "title": "Subscriptions sold",
+                "value": "16 | MTD 86"
+              },
+              {
+                "title": "Annual value sold",
+                "value": "$7,306 | MTD $38,730"
+              },
+              {
+                "title": "Cancellations",
+                "value": "4 | MTD 32"
+              },
+              {
+                "title": "Completed / missed",
+                "value": "113 / 12"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "The Defenders",
+            "wrap": true,
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Billed revenue MTD",
+                "value": "$41,422 (On track - 106.5% of pace (goal $150,000/mo))"
+              },
+              {
+                "title": "Collections MTD",
+                "value": "$44,396 (On track - 122.3% of pace (goal $140,000/mo))"
+              },
+              {
+                "title": "New subscriptions sold MTD",
+                "value": "52 (On track - 111.4% of pace (goal 180/mo))"
+              },
+              {
+                "title": "Completion rate",
+                "value": "89.2% (At risk - 94.0% of goal (95.0%))"
+              },
+              {
+                "title": "Top technicians",
+                "value": "Kevin Moore $1,038, Marcus Bell $918, Jose Rivera $916"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "- 7 scheduled appointments not completed and not rescheduled\n- Dana Price completed 69% of due stops\n- 2 completed services have no invoice or a $0 invoice",
+            "wrap": true,
+            "size": "Small"
+          },
+          {
+            "type": "TextBlock",
+            "text": "BugPro",
+            "wrap": true,
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Billed revenue MTD",
+                "value": "$13,124 (Behind - 80.2% of pace (goal $60,000/mo))"
+              },
+              {
+                "title": "Collections MTD",
+                "value": "UNAVAILABLE"
+              },
+              {
+                "title": "New subscriptions sold MTD",
+                "value": "34 (On track - 103.9% of pace (goal 120/mo))"
+              },
+              {
+                "title": "Completion rate",
+                "value": "85.7% (At risk - 90.2% of goal (95.0%))"
+              },
+              {
+                "title": "Top technicians",
+                "value": "Chris Webb $900, Sam Ortiz $799, Luis Ramos $560"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "- Billed revenue MTD at 80% of goal pace\n- 5 scheduled appointments not completed and not rescheduled\n- Luis Ramos completed 69% of due stops\n- 2 completed services have no invoice or a $0 invoice",
+            "wrap": true,
+            "size": "Small"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Unavailable metrics",
+            "wrap": true,
+            "weight": "Bolder",
+            "spacing": "Medium",
+            "color": "Warning"
+          },
+          {
+            "type": "TextBlock",
+            "text": "- BugPro - Collections: payments: not available from source (no API access)\n- BugPro - Collections MTD: payments: not available from source (no API access)",
+            "wrap": true,
+            "size": "Small"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Narrative: rule-based (AI disabled by configuration) | Run 1",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true
+          }
+        ]
+      }
+    }
+  ]
+}

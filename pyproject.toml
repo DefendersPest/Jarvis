@@ -1,0 +1,8 @@
+[project]
+name = "jarvis"
+version = "0.1.0"
+description = "JARVIS - The Defenders AI Operating System"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

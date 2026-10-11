@@ -1,0 +1,76 @@
+# JARVIS tenant configuration.
+#
+# Adding a company = add a block here, put its FieldRoutes credentials in Key
+# Vault under the secret names listed, then run:
+#     python -m jarvis.cli tenants sync --file config/tenants.yaml
+# No code or schema changes.
+#
+# Goal values below are PLACEHOLDERS for the prototype. Replace them with
+# management's real targets before go-live.
+
+companies:
+  - slug: defenders
+    name: The Defenders
+    timezone: America/New_York
+    workdays: [0, 1, 2, 3, 4, 5]    # Mon-Sat (0 = Monday) - used for goal pacing
+    branches:
+      - { slug: jax, name: Jacksonville, source_office_id: "1" }
+      - { slug: stj, name: St. Johns, source_office_id: "2" }
+    integrations:
+      fieldroutes:
+        config:
+          subdomain: thedefenders          # VERIFY: <subdomain>.pestroutes.com
+        secret_names:
+          auth_key: fieldroutes-defenders-auth-key
+          auth_token: fieldroutes-defenders-auth-token
+    goals:
+      - { metric: revenue_billed, period: monthly, target: 150000 }
+      - { metric: revenue_collected, period: monthly, target: 140000 }
+      - { metric: new_subscriptions, period: monthly, target: 180 }
+      - { metric: cancellations, period: monthly, target: 60, direction: lower_better }
+      - { metric: completion_rate, period: daily, target: 95 }
+
+  - slug: bugpro
+    name: BugPro
+    timezone: America/New_York
+    workdays: [0, 1, 2, 3, 4]
+    acquired_on: 2026-09-01
+    branches:
+      - { slug: main, name: BugPro Main, source_office_id: "10" }
+    integrations:
+      fieldroutes:
+        config:
+          subdomain: bugpro                # VERIFY
+          # Prototype only: simulate an account whose API key cannot read payments,
+          # to demonstrate how unavailable metrics are reported.
+          sample_unsupported: [payments]
+          sample_techs_per_branch: 3
+        secret_names:
+          auth_key: fieldroutes-bugpro-auth-key
+          auth_token: fieldroutes-bugpro-auth-token
+    goals:
+      - { metric: revenue_billed, period: monthly, target: 60000 }
+      - { metric: new_subscriptions, period: monthly, target: 120 }
+      - { metric: completion_rate, period: daily, target: 95 }
+
+agents:
+  - key: ceo_daily_report
+    name: Daily CEO Intelligence Report
+    description: Weekday 6 AM Eastern briefing delivered to Teams.
+    enabled: true
+    schedule: "0 0 10,11 * * 1-5 (UTC, gated to 06:00 America/New_York)"
+    permissions: [read:metrics, read:operational, write:findings, post:teams]
+  - key: retention
+    name: Customer Retention Agent
+    description: Flags at-risk customers (missed services, failed payments, complaints) for save calls.
+    enabled: false
+    permissions: [read:metrics, read:operational, write:findings]
+  - key: technician_performance
+    name: Technician Performance Monitor
+    enabled: false
+    permissions: [read:metrics, read:operational, write:findings]
+  - key: acquisition_integration
+    name: Acquisition Integration Monitor
+    description: Tracks KPIs of newly acquired companies against their pre-acquisition baseline.
+    enabled: false
+    permissions: [read:metrics, write:findings]

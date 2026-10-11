@@ -1,0 +1,11 @@
+# Runtime dependencies for the JARVIS Azure Function App (Python 3.11+)
+azure-functions>=2.0,<3
+azure-identity>=1.17,<2
+azure-keyvault-secrets>=4.8,<5
+anthropic>=1.13,<2
+sqlalchemy>=2.0,<3
+pyodbc>=5.1,<6          # Azure SQL (prod); not needed for local SQLite runs
+requests>=2.32,<3
+tenacity>=8.5
+pydantic>=2.7,<3
+pyyaml>=6.0
